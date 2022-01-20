@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --clr-accent: rgb(141, 230, 207);
+  --clr-offwhite: rgba(255, 255, 255, 0.747);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  /* /Globals/ */
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.89);
+  background: rgb(22, 22, 22);
+}
+
+a {
+  color: var(--clr-offwhite);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: var(--clr-accent);
+  box-shadow: 0px -5px 20px 1px rgba(0, 0, 0, 0.685);
+  color: black;
+}
+
+nav h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+#section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2em;
+  margin: 0 2em;
+}
+
+#section h1 {
+  position: relative;
+  color: white;
+  font-size: 3em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  font-weight: 300;
+}
+
+#section h1::after {
+  position: absolute;
+  content: "";
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  width: 50%;
+  height: 0.5px;
+  background: var(--clr-accent);
+}
+
+.subsection-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#subsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#subsection h2 {
+  position: relative;
+  color: var(--clr-offwhite);
+  font-size: 1.8em;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+
+#subsection h2:hover {
+  color: var(--clr-accent);
+}
+
+#subsection h2::after {
+  position: absolute;
+  content: "";
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  width: 2.5px;
+  border-radius: 50%;
+  height: 2.5px;
+  background: var(--clr-accent);
+  transition: width 0.25s, height 0.25s;
+}
+
+#subsection h2:hover::after {
+  width: 90%;
+  height: 0.5px;
+  border-radius: 0%;
+}
